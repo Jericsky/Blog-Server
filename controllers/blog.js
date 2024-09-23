@@ -64,7 +64,9 @@ module.exports.getSpecificPost = async (req, res) => {
 
         const result = await Blogs.findById(postId)
         if(result){
-            return res.status(200).send(result)
+            return res.status(200).send({post: result})
+        } else{
+            return res.status(404).send({error: 'No Blog post found'})
         }
         
     } catch (error) {
