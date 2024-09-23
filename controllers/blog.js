@@ -44,11 +44,6 @@ module.exports.createPost = async (req, res) => {
 module.exports.getAllPosts = async (req, res) => {
     try {
 
-        const {isAdmin} = req.user
-        if(!isAdmin){
-            return res.status(401).send({error: 'Admin access required'})
-        }
-
         const allPosts = await Blogs.find({})
         res.status(200).send(allPosts)
         

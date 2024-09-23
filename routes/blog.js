@@ -6,7 +6,7 @@ const router = express.Router()
 
 router.post('/posts',verify, blogControllers.createPost)
 
-router.get('/allPosts', verify, blogControllers.getAllPosts)
+router.get('/allPosts', blogControllers.getAllPosts)
 
 router.get('/post/:postId', verify, blogControllers.getSpecificPost)
 
