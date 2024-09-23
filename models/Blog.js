@@ -20,6 +20,9 @@ const blogSchema = new mongoose.Schema({
     },
     tags: {
         type: [String]
+    },
+    imageUrl: {
+        type: String
     }
 })
 

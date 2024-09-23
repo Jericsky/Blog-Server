@@ -4,7 +4,7 @@ module.exports.createPost = async (req, res) => {
     try {
         const {id} = req.user
 
-        const {title, content, category, tags} = req.body;
+        const {title, content, category, tags, imageUrl} = req.body;
         if(!title || !content || !category){
             return res.status(400).send({error: 'Title, Content and Category is required'})
         }
@@ -22,7 +22,9 @@ module.exports.createPost = async (req, res) => {
             content,
             authorId: id,
             category,
-            tags
+            tags,
+            imageUrl
+        
         })
 
         const post = await newPost.save()
