@@ -18,7 +18,8 @@ const corsOptions = {
     origin: [
         'http://localhost:3000',
         'http://localhost:10000', 
-        'https://blogapi-santos.onrender.com'
+        'https://blogapi-santos.onrender.com',
+        'https://blog-frontend-santos.vercel.app'
     ],
     credentials: true,
     optionSuccessStatus: 200
