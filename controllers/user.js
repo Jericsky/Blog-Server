@@ -64,14 +64,15 @@ module.exports.loginUser = async (req, res) => {
 
 module.exports.getUserProfile = async (req, res) => {
     try {
-        const {userId} = req.params
-
-        const user = await User.findById(userId) 
-        if(!user){
+        const {id} = req.user
+        if(!id){
             return res.status(404).send({error: 'No user found'})
         }
 
-        res.status(200).send(user)
+        const result = await User.findById(id)
+        if(result){
+            return res.status(200).send({user: result})
+        }
         
     } catch (error) {
         console.log('Error to get user profile: ', error)
