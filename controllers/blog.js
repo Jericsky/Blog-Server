@@ -47,7 +47,7 @@ module.exports.getAllPosts = async (req, res) => {
     try {
 
         const allPosts = await Blogs.find({})
-        res.status(200).send(allPosts)
+        res.status(200).send({posts: allPosts})
         
     } catch (error) {
         console.log('Error in getting all post: ', error)
