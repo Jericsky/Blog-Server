@@ -8,7 +8,7 @@ router.post('/posts',verify, blogControllers.createPost)
 
 router.get('/allPosts', blogControllers.getAllPosts)
 
-router.get('/myPosts', verify, blogControllers.getMyPosts)
+// router.get('/myPosts', verify, blogControllers.getMyPosts)
 
 router.get('/post/:postId', verify, blogControllers.getSpecificPost)
 
