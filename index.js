@@ -16,6 +16,7 @@ mongoose.connection.once('open', () => {
 
 const corsOptions = {
     origin: [
+        'http://localhost:3000',
         'http://localhost:10000', 
         'https://blogapi-santos.onrender.com'
     ],
