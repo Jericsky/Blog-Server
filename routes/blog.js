@@ -4,7 +4,7 @@ const {verify} = require('../auth')
 
 const router = express.Router()
 
-router.post('/posts',verify, blogControllers.createPost)
+router.post('/posts', blogControllers.createPost)
 
 router.get('/allPosts', blogControllers.getAllPosts)
 
