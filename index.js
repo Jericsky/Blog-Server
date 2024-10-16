@@ -19,7 +19,8 @@ const corsOptions = {
         'http://localhost:3000',
         'http://localhost:10000', 
         'https://blogapi-santos.onrender.com',,
-        'https://blog-frontend-santos-oxul9v2ng-jerics-projects-a47741a1.vercel.app/'
+        'https://blog-frontend-santos-oxul9v2ng-jerics-projects-a47741a1.vercel.app/',
+        'https://blog-frontend-santos-m589-7udtcqeow-jerics-projects-a47741a1.vercel.app/'
     ],
     credentials: true,
     optionSuccessStatus: 200
